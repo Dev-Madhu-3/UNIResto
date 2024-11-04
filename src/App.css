@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+.main-heading {
+  color: black;
+  font-size: 25px;
+  margin: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.header div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  gap: 10px;
+}
+.tabs-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 50px;
+}
+.tab-btn {
+  background-color: transparent;
+  border-width: 0;
+  font-size: 17px;
+  font-weight: 500;
+  padding-bottom: 10px;
+  width: 400px;
+  white-space: nowrap;
+}
+.red-btn {
+  color: red;
+  border-bottom: 2px solid red;
+}
+.redBg {
+  background-color: red;
+}
+.redCl {
+  color: red;
+}
+.items-list-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px 10px;
+}
+
+.item-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border: 2px solid rgb(192, 192, 192);
+  margin: 5px;
+}
+.item-card-container .first-con {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  width: 50%;
+}
+
+.veg-box {
+  width: 30px;
+  height: 30px;
+  border: 2px solid green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  flex-shrink: 0;
+}
+.veg-button {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: green;
+}
+.item-summery-container {
+}
+.img {
+  width: 150px;
+  height: 150px;
+  margin: 10px;
+}
+.calories {
+  color: #ff8000;
+  font-weight: 700;
+  font-size: 18px;
+}
+.food-name {
+  margin: 0;
+  font-size: 22px;
+  color: #000000;
+  font-weight: 700;
+}
+.increase-deacrease-con {
+  width: 120px;
+  height: 40px;
+  background-color: #009419;
+  border-width: 0;
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+}
+.item-count-btn {
+  background-color: transparent;
+  border-width: 0;
+  font-size: 25px;
+  color: inherit;
+}
+.rating {
+  font-size: 17px;
+  font-weight: 500;
+  color: #1e1e1e;
+  margin: 5px;
+}
+.discription {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 600;
+  margin: 5px;
+}
+.cutom-option {
+  font-size: 16px;
+  color: blue;
+  margin: 5px;
+}
+.visible {
+  visibility: hidden;
+}
