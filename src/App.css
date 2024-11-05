@@ -18,7 +18,6 @@ body {
 .main-heading {
   color: black;
   font-size: 25px;
-  margin: 0;
 }
 
 .header {
@@ -51,16 +50,16 @@ body {
   width: 400px;
   white-space: nowrap;
 }
+/* Style scrollbar for WebKit browsers */
+.tabs-container::-webkit-scrollbar {
+  height: 0; /* height of horizontal scrollbar */
+}
+
 .red-btn {
   color: red;
   border-bottom: 2px solid red;
 }
-.redBg {
-  background-color: red;
-}
-.redCl {
-  color: red;
-}
+
 .items-list-container {
   display: flex;
   flex-direction: column;
@@ -100,7 +99,11 @@ body {
   border-radius: 50%;
   background-color: green;
 }
-.item-summery-container {
+.redBg {
+  background-color: red;
+}
+.redCl {
+  border: 2px solid red;
 }
 .img {
   width: 150px;
@@ -156,4 +159,28 @@ body {
 }
 .visible {
   visibility: hidden;
+}
+.not-available {
+  color: red;
+}
+.cart-count-con {
+  width: 13px;
+  height: 15px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  z-index: 2;
+  top: -7px;
+  right: 10px;
+}
+.header div div {
+  position: relative;
 }

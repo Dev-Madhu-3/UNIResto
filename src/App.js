@@ -6,6 +6,7 @@ import FoodItem from './component/FoodItem'
 const App = () => {
   const [currentTab, setTab] = useState('')
   const [tabsList, setTabsList] = useState([])
+  const [cartCount, setCartCount] = useState(0)
 
   const onTabChange = event => {
     setTab(event.target.textContent)
@@ -35,20 +36,27 @@ const App = () => {
         <h1 className="main-heading">UNI Resto Cafe</h1>
         <div>
           <p>My Orders</p>
-          <FaShoppingCart />
+          <div>
+            <FaShoppingCart />
+            <div className="cart-count-con">
+              <p>{cartCount}</p>
+            </div>
+          </div>
         </div>
       </header>
       <div className="tabs-container">
-        {tabsList.map(e => (
+        {tabsList.map(eachItem => (
           <button
-            key={e.menu_category_id}
+            key={eachItem.dish_name}
             className={
-              currentTab === e.menu_category ? 'tab-btn red-btn' : 'tab-btn'
+              currentTab === eachItem.menu_category
+                ? 'tab-btn red-btn'
+                : 'tab-btn'
             }
             type="button"
             onClick={onTabChange}
           >
-            {e.menu_category}
+            {eachItem.menu_category}
           </button>
         ))}
       </div>
@@ -58,7 +66,12 @@ const App = () => {
             .filter(e => e.menu_category === currentTab)
             .map(e =>
               e.category_dishes.map(dish => (
-                <FoodItem key={dish.dish_name} {...dish} />
+                <FoodItem
+                  key={dish.dish_name}
+                  {...dish}
+                  cartCount={cartCount}
+                  setCart={setCartCount}
+                />
               )),
             )}
       </div>
