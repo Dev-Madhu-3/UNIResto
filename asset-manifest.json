@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/UNIResto/static/css/main.146a9aa9.chunk.css",
-    "main.js": "/UNIResto/static/js/main.229b63c0.chunk.js",
-    "main.js.map": "/UNIResto/static/js/main.229b63c0.chunk.js.map",
+    "main.css": "/UNIResto/static/css/main.c757387f.chunk.css",
+    "main.js": "/UNIResto/static/js/main.f1edaece.chunk.js",
+    "main.js.map": "/UNIResto/static/js/main.f1edaece.chunk.js.map",
     "runtime-main.js": "/UNIResto/static/js/runtime-main.28a38569.js",
     "runtime-main.js.map": "/UNIResto/static/js/runtime-main.28a38569.js.map",
-    "static/js/2.c46ac075.chunk.js": "/UNIResto/static/js/2.c46ac075.chunk.js",
-    "static/js/2.c46ac075.chunk.js.map": "/UNIResto/static/js/2.c46ac075.chunk.js.map",
+    "static/js/2.c9a29b4a.chunk.js": "/UNIResto/static/js/2.c9a29b4a.chunk.js",
+    "static/js/2.c9a29b4a.chunk.js.map": "/UNIResto/static/js/2.c9a29b4a.chunk.js.map",
     "index.html": "/UNIResto/index.html",
-    "static/css/main.146a9aa9.chunk.css.map": "/UNIResto/static/css/main.146a9aa9.chunk.css.map",
-    "static/js/2.c46ac075.chunk.js.LICENSE.txt": "/UNIResto/static/js/2.c46ac075.chunk.js.LICENSE.txt"
+    "static/css/main.c757387f.chunk.css.map": "/UNIResto/static/css/main.c757387f.chunk.css.map",
+    "static/js/2.c9a29b4a.chunk.js.LICENSE.txt": "/UNIResto/static/js/2.c9a29b4a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.28a38569.js",
-    "static/js/2.c46ac075.chunk.js",
-    "static/css/main.146a9aa9.chunk.css",
-    "static/js/main.229b63c0.chunk.js"
+    "static/js/2.c9a29b4a.chunk.js",
+    "static/css/main.c757387f.chunk.css",
+    "static/js/main.f1edaece.chunk.js"
   ]
 }
