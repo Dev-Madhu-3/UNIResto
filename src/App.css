@@ -184,3 +184,6 @@ body {
 .header div div {
   position: relative;
 }
+.items-list-container::-webkit-scrollbar {
+  display: none;
+}

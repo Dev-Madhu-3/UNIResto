@@ -1,5 +1,3 @@
-import {useState} from 'react'
-
 const FoodItem = props => {
   const {
     dish_currency: dishCurrency,
@@ -12,19 +10,28 @@ const FoodItem = props => {
     dish_Type: dishType,
     dish_Availability: dishAvailability,
     setCart,
+    cart,
   } = props
 
-  const [itemCount, setItemCount] = useState(0)
-
   const incrementCount = () => {
-    setItemCount(prevCount => prevCount + 1)
-    setCart(prevCount => prevCount + 1)
+    setCart(prevState => {
+      const newState = {...prevState}
+      if (newState[dishName]) {
+        newState[dishName] += 1
+      } else {
+        newState[dishName] = 1
+      }
+      return newState
+    })
   }
   const decrementCount = () => {
-    setItemCount(prevCount => (prevCount > 0 ? prevCount - 1 : 0))
-    if (itemCount > 0) {
-      setCart(prevCount => (prevCount > 0 ? prevCount - 1 : 0))
-    }
+    setCart(prevState => {
+      const newState = {...prevState}
+      if (newState[dishName] > 0) {
+        newState[dishName] -= 1
+      }
+      return newState
+    })
   }
 
   // useEffect(() => {
@@ -52,7 +59,7 @@ const FoodItem = props => {
               >
                 -
               </button>
-              {itemCount}
+              <p>{cart[dishName] ? cart[dishName] : 0}</p>
               <button
                 className="item-count-btn"
                 type="button"

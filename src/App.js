@@ -6,7 +6,7 @@ import FoodItem from './component/FoodItem'
 const App = () => {
   const [currentTab, setTab] = useState('')
   const [tabsList, setTabsList] = useState([])
-  const [cartCount, setCartCount] = useState(0)
+  const [cart, setCartCount] = useState({})
 
   const onTabChange = event => {
     setTab(event.target.textContent)
@@ -30,6 +30,8 @@ const App = () => {
     apiCall()
   }, [])
 
+  console.log(cart)
+
   return (
     <div className="main-container">
       <header className="header">
@@ -39,7 +41,7 @@ const App = () => {
           <div>
             <FaShoppingCart />
             <div className="cart-count-con">
-              <p>{cartCount}</p>
+              <p>{Object.values(cart).reduce((a, b) => a + b, 0)}</p>
             </div>
           </div>
         </div>
@@ -69,7 +71,7 @@ const App = () => {
                 <FoodItem
                   key={dish.dish_name}
                   {...dish}
-                  cartCount={cartCount}
+                  cart={cart}
                   setCart={setCartCount}
                 />
               )),
