@@ -20,17 +20,16 @@ const App = () => {
         )
         if (response.ok) {
           const data = await response.json()
-          setTabsList(data[0].table_menu_list)
-          setTab(data[0].table_menu_list[0].menu_category)
+          setTabsList(data[0].table_menu_list || [])
+          setTab(data[0].table_menu_list[0].menu_category || '')
         }
       } catch (e) {
         console.log(`Problem: ${e.message}`)
       }
     }
+
     apiCall()
   }, [])
-
-  console.log(cart)
 
   return (
     <div className="main-container">
@@ -49,7 +48,7 @@ const App = () => {
       <div className="tabs-container">
         {tabsList.map(eachItem => (
           <button
-            key={eachItem.dish_name}
+            key={eachItem.menu_category_id}
             className={
               currentTab === eachItem.menu_category
                 ? 'tab-btn red-btn'
@@ -69,7 +68,7 @@ const App = () => {
             .map(e =>
               e.category_dishes.map(dish => (
                 <FoodItem
-                  key={dish.dish_name}
+                  key={dish.menu_category_id}
                   {...dish}
                   cart={cart}
                   setCart={setCartCount}

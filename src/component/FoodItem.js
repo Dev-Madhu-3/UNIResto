@@ -71,9 +71,9 @@ const FoodItem = props => {
           ) : (
             <p className="not-available">Not Available</p>
           )}
-          <p className={addonCat[0] ? 'cutom-option' : 'cutom-option visible'}>
-            Customization Available
-          </p>
+          {addonCat && addonCat.length > 0 && (
+            <p className="custom-option">Customizations available</p>
+          )}
         </div>
       </div>
       <p className="calories">{dishCalories} calories</p>
